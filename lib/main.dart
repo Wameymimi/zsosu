@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:zsosu/screens/home_screen.dart';
 import 'package:zsosu/screens/login_screen.dart';
+import 'package:zsosu/screens/register_screen.dart';
 
 void main() {
   runApp(const App());
@@ -16,11 +17,13 @@ class App extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.green,
-        // appBarTheme: AppBarTheme(
-        //   backgroundColor: Colors.blue,
-        // ),
       ),
-      home: LoginScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/login': (context) => LoginScreen(),
+        '/register': (context) => RegisterScreen(),
+      },
       debugShowCheckedModeBanner: false,
     );
   }

@@ -46,7 +46,9 @@ class HomeScreen extends StatelessWidget {
                       shape: StadiumBorder(),
                       primary: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/register");
+                    },
                     child: Text(
                       "Sign up",
                       style: TextStyle(
@@ -62,13 +64,13 @@ class HomeScreen extends StatelessWidget {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       shape: StadiumBorder(),
-                      primary: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/login");
+                    },
                     child: Text(
-                      "Sign up",
+                      "Login",
                       style: TextStyle(
-                        color: Colors.green,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
